@@ -1,0 +1,246 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #1e1e1e;
+    padding: 20px;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    list-style: none;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: block;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav a:hover {
+    background-color: #808080;
+}
+
+/* Headings */
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5em;
+}
+
+/* Sections */
+section {
+    padding: 20px;
+    margin: 20px;
+}
+
+#about {
+    background-color: #222;
+}
+
+#projects, #skills, #experience, #education, #contact {
+    background-color: #333;
+    border-radius: 8px;
+}
+
+/* Images */
+img {
+    border-radius: 50%;
+    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Projects */
+.project {
+    background-color: #222;
+    padding: 15px;
+    margin: 10px auto;
+    width: 80%;
+    border-radius: 8px;
+}
+
+.project-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.button {
+    background-color: #808080;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    min-width: 120px;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #666;
+}
+
+/* Skills */
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skill {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 8px;
+    width: 150px;
+    text-align: center;
+}
+
+.skill img {
+    width: 60px;
+    height: 60px;
+}
+
+/* Contact Form */
+form input, form textarea {
+    display: block;
+    width: 50%;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #222;
+    border: 1px solid #444;
+    color: white;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #808080;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    min-width: 120px;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #666;
+}
+
+/* Social Links */
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+}
+
+/* Education Section */
+.education-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.education-logo {
+    width: 80px;
+    height: 80px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .project {
+        width: 95%;
+    }
+    
+    .project-buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .skill-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .skill {
+        width: 90%;
+    }
+    
+    form input, form textarea {
+        width: 90%;
+    }
+    
+    .education-container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8em;
+    }
+    
+    nav ul {
+        gap: 5px;
+    }
+    
+    .button, button {
+        width: 100%;
+    }
+    
+    .social-links a {
+        font-size: 1.2em;
+    }
+    
+    .education-logo {
+        width: 60px;
+        height: 60px;
+    }
+}
