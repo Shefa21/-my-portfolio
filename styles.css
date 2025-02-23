@@ -11,6 +11,7 @@ body {
     color: white;
     text-align: center;
     padding: 10px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 /* Header and Navigation */
@@ -23,13 +24,8 @@ nav ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    text-align: center;
     list-style: none;
     gap: 20px;
-}
-
-nav ul li {
-    display: inline;
 }
 
 nav a {
@@ -45,26 +41,18 @@ nav a:hover {
     background-color: #808080;
 }
 
-/* Headings */
-h1 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 2.5em;
-}
-
 /* Sections */
 section {
     padding: 20px;
     margin: 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-#about {
+#about, #projects, #skills, #experience, #education, #contact {
     background-color: #222;
 }
 
-#projects, #skills, #experience, #education, #contact {
-    background-color: #333;
-    border-radius: 8px;
-}
 /* Theme Toggle Button */
 .theme-toggle {
     position: fixed;
@@ -75,7 +63,6 @@ section {
     font-size: 1.5em;
     cursor: pointer;
     color: white;
-    background-color: transparent;
 }
 
 /* Light Theme */
@@ -88,23 +75,42 @@ section {
     background-color: #ddd;
 }
 
-[data-theme="light"] #projects, 
-[data-theme="light"] #skills, 
-[data-theme="light"] #experience, 
-[data-theme="light"] #education, 
-[data-theme="light"] #contact {
-    background-color: #e0e0e0;
-}
-
 [data-theme="light"] nav a {
     color: #121212;
 }
 
-[data-theme="light"] .button {
+[data-theme="light"] #about,
+[data-theme="light"] #projects,
+[data-theme="light"] #skills,
+[data-theme="light"] #experience,
+[data-theme="light"] #education,
+[data-theme="light"] #contact {
+    background-color: #ffffff;
+    color: #121212;
+}
+
+/* Buttons */
+.button, button {
+    background-color: #808080;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    min-width: 120px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.button:hover, button:hover {
+    background-color: #666;
+}
+
+/* Light Theme Buttons */
+[data-theme="light"] .button, [data-theme="light"] button {
     background-color: #555;
     color: white;
 }
-
 
 /* Images */
 img {
@@ -121,28 +127,12 @@ img {
     margin: 10px auto;
     width: 80%;
     border-radius: 8px;
+    transition: background-color 0.3s;
 }
 
-.project-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-}
-
-.button {
-    background-color: #808080;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    display: inline-block;
-    min-width: 120px;
-    text-align: center;
-}
-
-.button:hover {
-    background-color: #666;
+[data-theme="light"] .project {
+    background-color: #f0f0f0;
+    color: #121212;
 }
 
 /* Skills */
@@ -159,11 +149,12 @@ img {
     border-radius: 8px;
     width: 150px;
     text-align: center;
+    transition: background-color 0.3s;
 }
 
-.skill img {
-    width: 60px;
-    height: 60px;
+[data-theme="light"] .skill {
+    background-color: #e0e0e0;
+    color: #121212;
 }
 
 /* Contact Form */
@@ -176,21 +167,13 @@ form input, form textarea {
     border: 1px solid #444;
     color: white;
     border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-button {
-    padding: 10px 20px;
-    background-color: #808080;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    min-width: 120px;
-    text-align: center;
-}
-
-button:hover {
-    background-color: #666;
+[data-theme="light"] form input, [data-theme="light"] form textarea {
+    background-color: #f0f0f0;
+    color: #121212;
+    border: 1px solid #ccc;
 }
 
 /* Social Links */
@@ -203,6 +186,11 @@ button:hover {
     text-decoration: none;
     color: white;
     font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+[data-theme="light"] .social-links a {
+    color: #121212;
 }
 
 /* Education Section */
@@ -224,41 +212,23 @@ button:hover {
     body {
         font-size: 14px;
     }
-    
     h1 {
         font-size: 2em;
     }
-    
     nav ul {
         flex-direction: column;
         align-items: center;
         gap: 10px;
     }
-    
     .project {
         width: 95%;
     }
-    
-    .project-buttons {
-        flex-direction: column;
-        gap: 5px;
-    }
-    
     .skill-list {
         flex-direction: column;
         align-items: center;
     }
-    
-    .skill {
-        width: 90%;
-    }
-    
     form input, form textarea {
         width: 90%;
-    }
-    
-    .education-container {
-        width: 100%;
     }
 }
 
@@ -266,19 +236,12 @@ button:hover {
     h1 {
         font-size: 1.8em;
     }
-    
-    nav ul {
-        gap: 5px;
-    }
-    
     .button, button {
         width: 100%;
     }
-    
     .social-links a {
         font-size: 1.2em;
     }
-    
     .education-logo {
         width: 60px;
         height: 60px;
