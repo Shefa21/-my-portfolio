@@ -52,11 +52,19 @@ section {
 #about, #projects, #skills, #experience, #education, #contact {
     background-color: #222;
 }
-[data-theme="light"] #about {
-    background-color: #e0e0e0; /* Light background */
-    color: #121212; /* Dark text */
+
+/* Reduce About Me Image Size */
+#about img {
+    width: 50px; /* Reduce to half */
+    height: 50px; /* Maintain aspect ratio */
+    border-radius: 50%;
+    object-fit: cover;
 }
 
+[data-theme="light"] #about {
+    background-color: #e0e0e0;
+    color: #121212;
+}
 
 /* Theme Toggle Button */
 .theme-toggle {
