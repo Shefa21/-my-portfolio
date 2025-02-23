@@ -1,4 +1,24 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // Theme Switcher
+    const themeToggle = document.createElement("button");
+    themeToggle.textContent = "🌙";
+    themeToggle.classList.add("theme-toggle");
+    document.body.appendChild(themeToggle);
+    
+    function setTheme(theme) {
+        document.body.setAttribute("data-theme", theme);
+        localStorage.setItem("theme", theme);
+        themeToggle.textContent = theme === "dark" ? "🌙" : "☀️";
+    }
+    
+    // Load theme preference
+    const savedTheme = localStorage.getItem("theme") || "dark";
+    setTheme(savedTheme);
+    
+    themeToggle.addEventListener("click", () => {
+        const newTheme = document.body.getAttribute("data-theme") === "dark" ? "light" : "dark";
+        setTheme(newTheme);
+    });
     // Smooth scrolling for navigation links
     const navLinks = document.querySelectorAll("nav a");
     navLinks.forEach(link => {
