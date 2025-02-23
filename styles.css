@@ -65,6 +65,46 @@ section {
     background-color: #333;
     border-radius: 8px;
 }
+/* Theme Toggle Button */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: white;
+    background-color: transparent;
+}
+
+/* Light Theme */
+[data-theme="light"] {
+    background-color: #f5f5f5;
+    color: #121212;
+}
+
+[data-theme="light"] header {
+    background-color: #ddd;
+}
+
+[data-theme="light"] #projects, 
+[data-theme="light"] #skills, 
+[data-theme="light"] #experience, 
+[data-theme="light"] #education, 
+[data-theme="light"] #contact {
+    background-color: #e0e0e0;
+}
+
+[data-theme="light"] nav a {
+    color: #121212;
+}
+
+[data-theme="light"] .button {
+    background-color: #555;
+    color: white;
+}
+
 
 /* Images */
 img {
