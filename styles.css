@@ -52,6 +52,11 @@ section {
 #about, #projects, #skills, #experience, #education, #contact {
     background-color: #222;
 }
+[data-theme="light"] #about {
+    background-color: #e0e0e0; /* Light background */
+    color: #121212; /* Dark text */
+}
+
 
 /* Theme Toggle Button */
 .theme-toggle {
