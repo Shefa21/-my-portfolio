@@ -54,7 +54,7 @@ section {
 }
 
 #about img {
-    width: 70%; /* Scale down to 70% of the original size */
+    width: 80%; /* Scale down to 70% of the original size */
     max-width: 150px; /* Set a reasonable max-width to prevent oversized images */
     height: auto; /* Maintain aspect ratio */
     border-radius: 50%;
